@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Dhivyesh S, a B.Tech Information Technology student at KGiSL Institute of Technology, Coimbatore, interested in cybersecurity and software development.">
+  <meta name="theme-color" content="#0a1020">
+  <title>Dhivyesh S | Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a1020'/%3E%3Ctext x='16' y='22' font-size='16' font-family='monospace' font-weight='700' text-anchor='middle' fill='%2367e8f9'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Dhivyesh S</a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false">
+          <span class="label">Light mode</span>
+        </button>
+        <button id="nav-toggle" class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="top" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>I'm Dhivyesh. I study IT and I'm learning how systems work, and how to secure them.</h1>
+          <p class="lead">Second-year B.Tech Information Technology student at KGiSL Institute of Technology, Coimbatore. I like coding, networking and cybersecurity, and I learn best by building.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">See my projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="terminal-wrap">
+          <div class="terminal" role="region" aria-label="Interactive terminal about Dhivyesh">
+            <div class="term-bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="term-title">dhivyesh@portfolio: ~</span>
+            </div>
+            <div class="term-body" id="term-body">
+              <div id="term-output" role="log" aria-live="polite"></div>
+              <form id="term-form" class="term-line" autocomplete="off">
+                <label for="term-input"><span class="prompt" aria-hidden="true">$</span><span class="sr-only">Type a command</span></label>
+                <input id="term-input" type="text" spellcheck="false" autocapitalize="none" autocorrect="off" autocomplete="off" placeholder="type help">
+              </form>
+            </div>
+          </div>
+          <div class="term-shortcuts" role="group" aria-label="Terminal shortcuts">
+            <button type="button" data-cmd="help">help</button>
+            <button type="button" data-cmd="about">about</button>
+            <button type="button" data-cmd="skills">skills</button>
+            <button type="button" data-cmd="projects">projects</button>
+            <button type="button" data-cmd="contact">contact</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2>About me</h2>
+        <div class="about-grid">
+          <div class="prose">
+            <p>I'm an Information Technology student at <strong>KGiSL Institute of Technology</strong>. I'm interested in cybersecurity, software development and emerging technologies.</p>
+            <p>I enjoy learning by building projects, finding out how systems work, and improving my technical skills one step at a time. My goal is to build practical skills and grow into a cybersecurity or software engineering role.</p>
+          </div>
+          <dl class="facts">
+            <div><dt>Education</dt><dd>B.Tech in Information Technology, 2nd year</dd></div>
+            <div><dt>College</dt><dd>KGiSL Institute of Technology, Coimbatore</dd></div>
+            <div><dt>Interests</dt><dd>Cybersecurity, ethical hacking, networking, software development</dd></div>
+            <div><dt>Programming</dt><dd>Python, C, C++ and Java (foundational knowledge)</dd></div>
+            <div><dt>Tools</dt><dd>Linux, Git, GitHub, VS Code</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <p class="section-note">Filter by area. I'm still early in my journey, so programming languages are marked as foundational.</p>
+
+        <div class="filters" role="group" aria-label="Filter skills by area">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="programming" aria-pressed="false">Programming</button>
+          <button type="button" class="filter" data-filter="security" aria-pressed="false">Security</button>
+          <button type="button" class="filter" data-filter="systems" aria-pressed="false">Systems and networking</button>
+          <button type="button" class="filter" data-filter="tools" aria-pressed="false">Tools</button>
+        </div>
+        <p id="skill-count" class="sr-only" aria-live="polite"></p>
+
+        <ul class="skill-list" id="skill-list">
+          <li data-cat="programming"><span class="skill-name">Python</span><span class="skill-level">Foundational</span></li>
+          <li data-cat="programming"><span class="skill-name">C</span><span class="skill-level">Foundational</span></li>
+          <li data-cat="programming"><span class="skill-name">C++</span><span class="skill-level">Foundational</span></li>
+          <li data-cat="programming"><span class="skill-name">Java</span><span class="skill-level">Foundational</span></li>
+          <li data-cat="security"><span class="skill-name">Security fundamentals</span><span class="skill-level">Learning</span></li>
+          <li data-cat="security"><span class="skill-name">Ethical hacking concepts</span><span class="skill-level">Learning</span></li>
+          <li data-cat="systems"><span class="skill-name">Computer networking</span><span class="skill-level">Fundamentals</span></li>
+          <li data-cat="systems"><span class="skill-name">Linux</span><span class="skill-level">Basics</span></li>
+          <li data-cat="systems"><span class="skill-name">Command line</span><span class="skill-level">Basics</span></li>
+          <li data-cat="tools"><span class="skill-name">Git</span><span class="skill-level">Working knowledge</span></li>
+          <li data-cat="tools"><span class="skill-name">GitHub</span><span class="skill-level">Working knowledge</span></li>
+          <li data-cat="tools"><span class="skill-name">VS Code</span><span class="skill-level">Daily use</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <h2>Projects and activities</h2>
+        <ul class="project-list">
+          <li class="project">
+            <span class="project-tag">Concept</span>
+            <div>
+              <h3>AI Lost-Item Reunion System</h3>
+              <p>An idea for matching lost and found items using image similarity, location and timestamp information.</p>
+            </div>
+          </li>
+          <li class="project">
+            <span class="project-tag">Concept</span>
+            <div>
+              <h3>Dynamic Bus-Bunching Corrector</h3>
+              <p>An idea for detecting bus bunching and suggesting schedule adjustments to keep service regular.</p>
+            </div>
+          </li>
+          <li class="project">
+            <span class="project-tag tag-event">Hackathon</span>
+            <div>
+              <h3>E-Mobility HackFest 2026</h3>
+              <p>Took part as a member of Team MEGA MINDS. The team was shortlisted for the final round.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="section-note">Project descriptions reflect concepts and participation. Repository links will be added as projects are published.</p>
+      </div>
+    </section>
+
+    <!-- Focus -->
+    <section id="focus" class="section section-alt">
+      <div class="wrap">
+        <h2>What I'm working on now</h2>
+        <ul class="focus-list">
+          <li>Strengthening programming and problem-solving fundamentals</li>
+          <li>Practising Linux and computer networking</li>
+          <li>Learning cybersecurity through legal, authorised labs</li>
+          <li>Building and documenting practical projects</li>
+          <li>Improving communication and technical presentation skills</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <p class="prose">Have a question, an opportunity or an idea? Send me an email.</p>
+          <p class="email-line"><a id="email-link" href="mailto:dhivyeshdivi@gmail.com">dhivyeshdivi@gmail.com</a></p>
+          <div class="cta-row">
+            <button id="copy-email" class="btn btn-ghost" type="button">Copy email</button>
+            <a class="btn btn-ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=dhivyeshdivi%40gmail.com" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
+          </div>
+          <p id="copy-status" class="status" role="status"></p>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <label for="cf-name">Your name</label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name">
+
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+
+          <button class="btn btn-primary" type="submit">Write email</button>
+          <p class="form-note">This opens your email app with the message filled in. Nothing is stored on this site.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Learn consistently, build practically, and improve one step at a time.</p>
+      <p class="small">&copy; <span id="year">2026</span> Dhivyesh S</p>
+    </div>
+  </footer>
+</body>
+</html>
